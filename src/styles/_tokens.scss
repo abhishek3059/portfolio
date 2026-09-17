@@ -1,0 +1,71 @@
+// ── Design tokens: Neural Network / Deep Space ─────────────────────────────
+// CSS custom properties (runtime theming) + SCSS helpers (compile time).
+// No hardcoded hex outside this file.
+
+:root,
+[data-theme='dark'] {
+  --bg-void: #0a0a0f;
+  --bg-surface: #12121a;
+  --accent-primary: #6366f1;
+  --accent-secondary: #22d3ee;
+  --accent-tertiary: #a78bfa;
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --glow-primary: rgba(99, 102, 241, 0.4);
+  --glow-secondary: rgba(34, 211, 238, 0.3);
+  --success: #34d399;
+  --card-bg: rgba(18, 18, 26, 0.6);
+  --card-border: rgba(99, 102, 241, 0.22);
+  --header-bg: rgba(10, 10, 15, 0.72);
+  --radius: 16px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme='light'] {
+  --bg-void: #f1f3fa;
+  --bg-surface: #ffffff;
+  --text-primary: #14161f;
+  --text-muted: #5b6478;
+  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(99, 102, 241, 0.35);
+  --header-bg: rgba(241, 243, 250, 0.8);
+}
+
+// ── Breakpoints ─────────────────────────────────────────────────────────────
+$bp-tablet: 900px;
+$bp-mobile: 600px;
+
+@mixin tablet-down {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile-down {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+// ── Shared effects ──────────────────────────────────────────────────────────
+@mixin glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+}
+
+@mixin gradient-text {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin section-container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}

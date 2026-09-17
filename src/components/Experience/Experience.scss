@@ -1,0 +1,97 @@
+@use '../../styles/tokens' as *;
+
+.experience {
+  padding: 6rem 0;
+
+  &__container {
+    @include section-container;
+    max-width: 860px;
+  }
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding-left: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+    box-shadow: 0 0 12px var(--glow-primary);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__dot {
+    position: absolute;
+    left: -2rem;
+    top: 1.6rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg-void);
+    border: 2px solid var(--accent-secondary);
+    box-shadow: 0 0 14px var(--glow-secondary);
+  }
+
+  &__card {
+    @include glass;
+    padding: 1.6rem;
+    transition: box-shadow 0.25s ease;
+
+    &:hover {
+      box-shadow: 0 0 32px var(--glow-primary);
+    }
+  }
+
+  &__role {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  &__company {
+    font-family: var(--font-display);
+    color: var(--accent-secondary);
+    font-weight: 600;
+    margin-top: 0.2rem;
+  }
+
+  &__meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0.4rem 0 1rem;
+  }
+
+  &__bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  &__bullet {
+    position: relative;
+    padding-left: 1.3rem;
+    color: var(--text-muted);
+    font-size: 0.93rem;
+    font-weight: 300;
+
+    &::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+    }
+  }
+}

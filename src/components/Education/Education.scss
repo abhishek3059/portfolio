@@ -1,0 +1,50 @@
+@use '../../styles/tokens' as *;
+
+.education {
+  padding: 6rem 0;
+
+  &__container {
+    @include section-container;
+    max-width: 860px;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1.4rem;
+  }
+
+  &__card {
+    @include glass;
+    padding: 1.8rem;
+    text-align: center;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 32px var(--glow-primary);
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+  }
+
+  &__degree {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.6rem 0 0.3rem;
+  }
+
+  &__school {
+    color: var(--accent-secondary);
+    font-weight: 500;
+  }
+
+  &__meta {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+  }
+}

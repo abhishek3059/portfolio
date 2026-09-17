@@ -1,0 +1,41 @@
+# Portfolio — local-only privacy + standard ignores
+
+# --- PRIVATE: resume source, never push to GitHub or any VCS ---
+**/PERSONAL/
+PERSONAL/
+docs/PERSONAL/
+PERSONAL/*.txt
+PERSONAL/*.pdf
+*Resume*.pdf
+*Resume*.txt
+
+# --- Vite / Node ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+vite.config.js.timestamp-*
+
+# --- Logs / OS / editor ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
