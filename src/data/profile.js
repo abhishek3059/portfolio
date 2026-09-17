@@ -4,6 +4,7 @@ export const profile = {
   role: 'Full-Stack Developer & AI Systems Builder',
   tagline: 'I build production systems — from microservice backends to multi-agent AI platforms.',
   github: 'https://github.com/abhishek3059',
+  website: 'https://portfolio-one-ashy-uphpml7gag.vercel.app/',
   avatar: 'https://avatars.githubusercontent.com/u/91185735?v=4',
   linkedin: 'https://linkedin.com/in/abhishekiscoding',
   email: 'abhishekshukla3059@gmail.com',
