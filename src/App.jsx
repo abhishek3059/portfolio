@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { BuildingNow } from './components/BuildingNow/BuildingNow';
 import { CommandPalette } from './components/CommandPalette/CommandPalette';
 import { Contact } from './components/Contact/Contact';
 import { Education } from './components/Education/Education';
@@ -34,6 +35,7 @@ export function App() {
         <Hero />
         <Skills />
         <Projects />
+        <BuildingNow />
         <Experience />
         <Education />
         <Contact />

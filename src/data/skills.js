@@ -1,32 +1,26 @@
 export const skills = [
   {
-    icon: '⚙️',
-    title: 'Backend & Microservices',
-    tags: ['Java', 'Spring Boot', 'Spring Data JPA', 'Hibernate', 'REST APIs', 'Microservices Architecture', 'MySQL', 'Oracle SQL'],
+    icon: '☕',
+    title: 'Java & Backend',
+    tags: ['Java 11', 'Spring Boot', 'Spring Data JPA', 'Hibernate', 'REST APIs', 'Microservices', 'JUnit', 'Mockito'],
   },
-  {
-    icon: '🤖',
-    title: 'AI & Agentic Systems',
-    tags: ['Python', 'LangGraph', 'LangChain', 'CrewAI', 'Guardrails AI', 'Ragas', 'DeepEval', 'OpenAI APIs'],
-  },
-  {
-    icon: '🔗',
-    title: 'MCP & RAG Pipelines',
-    tags: ['Model Context Protocol (MCP)', 'Multi-Repo MCP Server', 'RAG Artifacts', 'Knowledge Graphs', 'Context Retrieval'],
-  },
+  { icon: '🗄️', title: 'Database', tags: ['Oracle SQL', 'MySQL'] },
   {
     icon: '🖥️',
-    title: 'Frontend & UI',
-    tags: ['React', 'Vue.js', 'Angular', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Vite'],
+    title: 'Frontend',
+    tags: ['JavaScript (ES6+)', 'Angular', 'React.js', 'HTML5', 'CSS3'],
   },
   {
     icon: '🚀',
-    title: 'DevOps & Tools',
-    tags: ['Docker', 'Kubernetes', 'AWS', 'Git', 'GitHub Actions', 'Azure Pipelines', 'Vercel', 'VS Code Extensions'],
+    title: 'Cloud & DevOps',
+    tags: ['AWS (EC2, S3)', 'Docker', 'Kubernetes', 'Azure DevOps CI/CD', 'Grafana', 'Honeycomb'],
   },
   {
-    icon: '📱',
-    title: 'Mobile & Edge AI',
-    tags: ['Android (Kotlin/Java)', 'Accessibility Services', 'On-Device AI', 'Edge ML Inference'],
+    icon: '🤖',
+    title: 'GenAI (personal projects)',
+    tags: [
+      'Python', 'LangChain', 'LangGraph', 'RAG', 'Hybrid Search (BM25 + vector, RRF)',
+      'Cross-Encoder Reranking', 'ChromaDB', 'MCP', 'Ragas', 'DeepEval',
+    ],
   },
 ];

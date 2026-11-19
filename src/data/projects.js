@@ -4,8 +4,8 @@ export const projects = [
     icon: '🤖',
     featured: true,
     description:
-      'Universal scoped RAG Q&A console for AI agent responses. Capture any reply and interrogate it in an isolated sandbox — local ONNX embeddings, hybrid BM25 + dense retrieval fused with RRF, real-time SSE streaming, and 5 OpenAI-compatible providers. Live on the VS Code Marketplace; also runs on Antigravity, Cursor, and Windsurf.',
-    tech: ['TypeScript', 'RAG', 'VS Code Extension', 'ONNX Embeddings', 'SSE Streaming'],
+      'RAG extension for VS Code, published as v0.1.0 on the VS Code Marketplace. Local hybrid retrieval (structural chunking, ONNX embeddings, BM25 + cosine with RRF) and provider-agnostic generation with SSE streaming and encrypted key storage.',
+    tech: ['TypeScript', 'RAG', 'VS Code Extension', 'ONNX Embeddings', 'BM25 + RRF', 'SSE Streaming'],
     github: 'https://github.com/abhishek3059/Agentic-chat-QA-bot',
     extraLinks: [
       {
@@ -14,27 +14,27 @@ export const projects = [
       },
     ],
     status: 'Live on VS Code Marketplace · v0.1.0',
-    metric: 'Local hybrid RAG · zero telemetry · 72 unit tests',
+    metric: '72 unit tests · 21 architecture decision records',
   },
   {
-    name: 'deep-research.ai',
+    name: 'DeepResearch AI',
     icon: '🔬',
     description:
-      'Multi-agent research platform with a persistent knowledge base — orchestrated specialists that plan, retrieve, verify, and accumulate knowledge across sessions.',
-    tech: ['Python', 'LangGraph', 'CrewAI', 'Guardrails AI', 'Ragas', 'DeepEval'],
+      'Multi-agent RAG platform with evaluation. A self-critique agent built with LangGraph (retrieve, generate, critique, revise) routes conditionally on faithfulness and relevancy scores. Hybrid retrieval fuses ChromaDB vector search and BM25 with RRF, plus cross-encoder reranking; Ragas and DeepEval run as offline CI evaluation.',
+    tech: ['Python', 'LangGraph', 'ChromaDB', 'BM25 + RRF', 'Cross-Encoder Reranking', 'Ragas', 'DeepEval'],
     github: 'https://github.com/abhishek3059/deep-research.ai',
-    status: 'In active development',
-    metric: 'Multi-agent orchestration with persistent knowledge',
+    status: 'Independent project',
+    metric: 'Self-critique loop · offline CI evaluation',
   },
   {
-    name: 'Multi-Repository MCP Server',
+    name: 'MCP Server — Multi-Repo Workspace Orchestrator',
     icon: '🔗',
     description:
-      'Python MCP server for multi-repo AI workflows — shared workspaces, cross-repo search, workflow persistence, Git operations, and generated context/RAG artifacts like indexes, retrieval chunks, and architecture maps.',
-    tech: ['Python', 'MCP', 'OpenAI', 'Git', 'RAG Artifacts', 'Linear'],
+      'Python MCP server built as a personal workflow tool: Linear ticket ingestion, RAG-driven cross-repo code search and a code-reviewer agent.',
+    tech: ['Python', 'MCP', 'RAG', 'Linear'],
     github: 'https://github.com/abhishek3059/multi-repository-mcp',
-    status: 'Personal tool · ⭐ 1 star',
-    metric: 'Cut developer context-switching by ~50%',
+    status: 'Personal workflow tool',
+    metric: 'Cross-repo search + code-reviewer agent',
   },
   {
     name: 'Ticket Reservation Microservices',

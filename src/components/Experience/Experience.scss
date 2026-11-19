@@ -95,3 +95,48 @@
     }
   }
 }
+
+.timeline__projects {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-tertiary);
+  }
+}
+
+.case-card {
+  @include glass;
+  padding: 1.3rem;
+  border-color: rgba(167, 139, 250, 0.4);
+  background: linear-gradient(120deg, rgba(99, 102, 241, 0.1), transparent 60%), var(--card-bg);
+
+  &__name {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    @include gradient-text;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1rem;
+  }
+
+  &__tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.28rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid var(--card-border);
+  }
+}

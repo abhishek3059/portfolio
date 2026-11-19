@@ -28,6 +28,31 @@ export function Experience() {
                     ))}
                   </ul>
                 )}
+                {job.projects.length > 0 && (
+                  <div className="timeline__projects">
+                    <p className="timeline__projects-label">Production work</p>
+                    {job.projects.map((p) => (
+                      <div key={p.name} className="case-card">
+                        <h4 className="case-card__name">{p.name}</h4>
+                        <p className="timeline__meta">{p.timeline}</p>
+                        <ul className="timeline__bullets">
+                          {p.bullets.map((b) => (
+                            <li key={b.slice(0, 32)} className="timeline__bullet">
+                              {b}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="case-card__tags">
+                          {p.tech.map((t) => (
+                            <span key={t} className="case-card__tag">
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </article>
           ))}
