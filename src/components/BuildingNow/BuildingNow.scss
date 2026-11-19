@@ -1,0 +1,150 @@
+@use '../../styles/tokens' as *;
+
+@property --building-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.building {
+  padding: 6rem 0;
+
+  &__container {
+    @include section-container;
+    max-width: 960px;
+  }
+
+  &__card {
+    position: relative;
+    padding: 2.4rem;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--bg-surface), var(--bg-surface)) padding-box,
+      conic-gradient(from var(--building-angle), var(--accent-primary), var(--accent-secondary), var(--accent-tertiary), var(--accent-primary)) border-box;
+    animation: building-spin 6s linear infinite;
+    box-shadow: 0 0 44px var(--glow-primary);
+
+    @include mobile-down {
+      padding: 1.6rem;
+    }
+  }
+
+  &__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-secondary);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    background: rgba(34, 211, 238, 0.07);
+  }
+
+  &__pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--success);
+    animation: building-pulse 1.8s ease-out infinite;
+  }
+
+  &__name {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    margin: 0.9rem 0 0.6rem;
+    @include gradient-text;
+  }
+
+  &__pitch {
+    color: var(--text-muted);
+    font-weight: 300;
+    max-width: 62ch;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 1.4rem 0;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 1.3rem;
+    color: var(--text-muted);
+    font-size: 0.93rem;
+    font-weight: 300;
+
+    &::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+    }
+  }
+
+  &__pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+
+    @include tablet-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-down {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__pillar {
+    padding: 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    background: rgba(99, 102, 241, 0.08);
+  }
+
+  &__pillar-icon {
+    font-size: 1.4rem;
+  }
+
+  &__pillar-title {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    margin: 0.4rem 0 0.2rem;
+  }
+
+  &__pillar-text {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+}
+
+@keyframes building-spin {
+  to {
+    --building-angle: 360deg;
+  }
+}
+
+@keyframes building-pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--glow-secondary);
+  }
+  100% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .building__card,
+  .building__pulse {
+    animation: none;
+  }
+}

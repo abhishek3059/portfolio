@@ -18,6 +18,10 @@ export function Hero() {
           height="120"
           loading="lazy"
         />
+        <p className="hero__open">
+          <span className="hero__open-dot" aria-hidden="true" />
+          {profile.openToWork}
+        </p>
         <p className="hero__eyebrow">Hello, I&apos;m</p>
         <h1 className="hero__name">{profile.name}</h1>
         <p className="hero__typing" aria-live="polite">

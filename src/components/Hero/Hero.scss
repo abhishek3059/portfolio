@@ -25,6 +25,26 @@
     margin-bottom: 1.4rem;
   }
 
+  &__open {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--success);
+    border: 1px solid var(--success);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__open-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--success);
+  }
+
   &__eyebrow {
     color: var(--text-muted);
     font-size: 1.05rem;

@@ -17,6 +17,7 @@ export function CommandPalette({ open, onClose }) {
       { name: '/about', hint: 'Scroll to About', run: () => scrollTo('about') },
       { name: '/skills', hint: 'Scroll to Skills', run: () => scrollTo('skills') },
       { name: '/projects', hint: 'Scroll to Projects', run: () => scrollTo('projects') },
+      { name: '/building', hint: 'Scroll to Currently Building (super-agent)', run: () => scrollTo('building') },
       { name: '/experience', hint: 'Scroll to Experience', run: () => scrollTo('experience') },
       { name: '/contact', hint: 'Scroll to Contact', run: () => scrollTo('contact') },
       {
